@@ -140,23 +140,23 @@ define(['jquery', 'storage'], function($, Storage) {
                         switch(result.reason) {
                             case 'invalidlogin':
                                 // Login information was not correct (either username or password)
-                                self.addValidationError(null, 'The username or password you entered is incorrect.');
+                                self.addValidationError(null, 'نام بازیکن یا رمز عبور اشتباه است');
                                 self.getUsernameField().focus();
                                 break;
                             case 'userexists':
                                 // Attempted to create a new user, but the username was taken
-                                self.addValidationError(self.getUsernameField(), 'The username you entered is not available.');
+                                self.addValidationError(self.getUsernameField(), 'این بازیکن وجود ندارد.');
                                 break;
                             case 'invalidusername':
                                 // The username contains characters that are not allowed (rejected by the sanitizer)
-                                self.addValidationError(self.getUsernameField(), 'The username you entered contains invalid characters.');
+                                self.addValidationError(self.getUsernameField(), 'اسم بازیکن حاوی کاراکترهای غیرمجاز است');
                                 break;
                             case 'loggedin':
                                 // Attempted to log in with the same user multiple times simultaneously
-                                self.addValidationError(self.getUsernameField(), 'A player with the specified username is already logged in.');
+                                self.addValidationError(self.getUsernameField(), 'بازیکنی با این نام در حال بازی است.');
                                 break;
                             default:
-                                self.addValidationError(null, 'Failed to launch the game: ' + (result.reason ? result.reason : '(reason unknown)'));
+                                self.addValidationError(null, 'مشکل در اجرای بازی: ' + (result.reason ? result.reason : '(دلیل نامشخص)'));
                                 break;
                         }
                     }
@@ -189,7 +189,7 @@ define(['jquery', 'storage'], function($, Storage) {
                 this.$play.addClass('loading');
                 $playButton.unbind('click');
                 this.playButtonRestoreText = $playButton.text();
-                $playButton.text('Loading...');
+                $playButton.text(' بارگذاری...');
             }
         },
 
@@ -216,29 +216,29 @@ define(['jquery', 'storage'], function($, Storage) {
             this.clearValidationErrors();
 
             if(!username) {
-                this.addValidationError(this.getUsernameField(), 'Please enter a username.');
+                this.addValidationError(this.getUsernameField(), 'نام بازیکن را وارد کنید');
                 return false;
             }
 
             if(!userpw) {
-                this.addValidationError(this.getPasswordField(), 'Please enter a password.');
+                this.addValidationError(this.getPasswordField(), 'کلمه عبور را وارد کنید');
                 return false;
             }
 
             if(this.createNewCharacterFormActive()) {     // In Create New Character form (rather than login form)
                 if(!userpw2) {
-                    this.addValidationError(this.$pwinput2, 'Please confirm your password by typing it again.');
+                    this.addValidationError(this.$pwinput2, 'لطفا کلمه عبور را تکرار کنید');
                     return false;
                 }
 
                 if(userpw !== userpw2) {
-                    this.addValidationError(this.$pwinput2, 'The passwords you entered do not match. Please make sure you typed the password correctly.');
+                    this.addValidationError(this.$pwinput2, 'دو کلمه عبوری که وارد کرده اید یکسان نیستند. لطفا دوباره تلاش کنید.');
                     return false;
                 }
 
                 // Email field is not required, but if it's filled out, then it should look like a valid email.
                 if(email && !this.validateEmail(email)) {
-                    this.addValidationError(this.$email, 'The email you entered appears to be invalid. Please enter a valid email (or leave the email blank).');
+                    this.addValidationError(this.$email, 'ایمیلی که وارد کردید نامعتبر است. لطفا آن را چک کنید یا کلا خالی بگذارید.');
                     return false;
                 }
             }
@@ -320,7 +320,7 @@ define(['jquery', 'storage'], function($, Storage) {
                 }
                 var level = Types.getMobLevel(Types.getKindFromString(name));
                 if(level !== undefined) {
-                    $(el + ' .level').text("Level " + level);
+                    $(el + ' .level').text("سطح " + level);
                 }
                 else {
                     $('#inspector .level').text('');

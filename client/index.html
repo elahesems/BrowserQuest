@@ -60,11 +60,11 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
 	<body class="intro">
 	    <noscript>
 	       <div class="alert">
-	           You need to enable JavaScript to play BrowserQuest.
+	           برای بازی شکست کرونا، باید جاوااسکریپت را فعال کنید.
 	       </div>
 	    </noscript>
 	    <a id="moztab" class="clickable" target="_blank" href="http://www.mozilla.org/"></a>
-	    <div id="intro">
+	    <div id="intro" class="rtl">
 	        <h1 id="logo">
 	           <span id="logosparks">
 
@@ -72,61 +72,61 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
 	        </h1>
 	        <article id="portrait">
 	            <p>
-	               Please rotate your device to landscape mode
+	               لطفا دستگاه را بچرخانید تا در وضعیت افقی باشد.
 	            </p>
 	            <div id="tilt"></div>
 	        </article>
-	        <section id="parchment" class="createcharacter">
+	        <section id="parchment" class="createcharacter" >
 	            <div class="parchment-left"></div>
 	            <div class="parchment-middle">
                     <article id="createcharacter">
           	           <h1>
           	               <span class="left-ornament"></span>
-          	               Create New Character
+          	               ساخت بازیکن جدید
           	               <span class="right-ornament"></span>
                          </h1>
                          <form action="none" method="get" accept-charset="utf-8">
-                             <input type="text" id="nameinput" class="stroke" name="player-name" placeholder="Character Name" maxlength="12">
-                             <input type="password" id="pwinput" class="stroke" name="player-pw" placeholder="Password" maxlength="15">
-                             <input type="password" id="pwinput2" class="stroke" name="player-pw2" placeholder="Confirm Password" maxlength="15">
-                             <input type="email" id="emailinput" class="stroke" name="player-email" placeholder="Email address" maxlength="48">
+                             <input type="text" id="nameinput" class="stroke" name="player-name" placeholder="اسم بازیکن" maxlength="12">
+                             <input type="password" id="pwinput" class="stroke" name="player-pw" placeholder="کلمه عبور" maxlength="15">
+                             <input type="password" id="pwinput2" class="stroke" name="player-pw2" placeholder="تکرار کلمه عبور" maxlength="15">
+                             <input type="email" id="emailinput" class="stroke" name="player-email" placeholder="آدرس ایمیل" maxlength="48">
                          </form>
                          <div class="play">
-                           <span class="link">Create</span>
+                           <span class="link">ساخت بازیکن</span>
                          </div>
                          <div class="validation-summary"></div>
                     </article>
                     <article id="loadcharacter">
           	           <h1>
           	               <span class="left-ornament"></span>
-          	               BrowserQuest
+          	               گذر از کرونا
           	               <span class="right-ornament"></span>
                          </h1>
                          <form action="none" method="get" accept-charset="utf-8">
-                             <input type="text" id="loginnameinput" class="stroke" name="player-name" placeholder="Character Name" maxlength="12" autofocus>
-                             <input type="password" id="loginpwinput" class="stroke" name="player-loginpw" placeholder="Password" maxlength="15">
+                             <input type="text" id="loginnameinput" class="stroke" name="player-name" placeholder="اسم بازیکن" maxlength="12" autofocus>
+                             <input type="password" id="loginpwinput" class="stroke" name="player-loginpw" placeholder="کلمه عبور" maxlength="15">
                          </form>
                          <div class="play">
-                           <span class="link">Login</span>
+                           <span class="link">ورود</span>
                            <img src="img/common/spinner2.gif">
                          </div>
                          <div class="validation-summary"></div>
                          <div id="create-new">
-                            <span class="link">New Character</span>
+                            <span class="link">بازیکن جدید</span>
                          </div>
                     </article>
                     <article id="confirmation">
           	           <h1>
           	               <span class="left-ornament"></span>
-                           You need to accept the following terms of usage before creating a new character.<br>
-                           None right now - just Continue!<br><br>
+                           برای ورود باید شرایط زیر را بپذیرید!<br>
+                           شرط خاصی نبود! وارد شوید...<br><br>
           	               <span class="right-ornament"></span>
                          </h1>
                          <div id="continue">
-                         <span class="link">Continue</span>
+                         <span class="link">ادامه</span>
                          </div>
                          <div id="cancel">
-                            <span class="link">Cancel</span>
+                            <span class="link">بازگشت</span>
                          </div>
                     </article>
     	            <article id="credits">
@@ -196,18 +196,18 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
                         </div>
                   </article>
     	            <article id="death">
-                        <p>You are dead...</p>
+                        <p>شما مردید!</p>
     					<div id="respawn" class="button"></div>
     	            </article>
                     <article id="error">
           	           <h1>
           	               <span class="left-ornament"></span>
-          	               Your browser cannot run BrowserQuest!
+          	               مرورگر شما امکان اجرای عبور از کرونا را ندارد!
           	               <span class="right-ornament"></span>
                          </h1>
                          <p>
-                             We're sorry, but your browser does not support WebSockets.<br>
-                             In order to play, we recommend using the latest version of Firefox, Chrome or Safari.
+                             متاسفانه براوزر شما از وب سوکت ها پشتیبانی نمی‌کند. <br>
+                             برای بازی، از براوزرهایی مانند فایرفاکس، کروم یا سافاری استفاده کنید.
                          </p>
                     </article>
                     <article id="legal">
@@ -234,15 +234,15 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
 		            <div class="close"></div>
 		            <h1>
      	               <span class="left-ornament"></span>
-     	               How to play
+     	               شیوه بازی
      	               <span class="right-ornament"></span>
 	                </h1>
 	                <ul>
-	                   <li><span class="icon"></span>Left click or tap to move, attack and pick up items. Hold SHIFT to attack another player.</li>
-	                   <li><span class="icon"></span>Press ENTER to chat.</li>
-	                   <li><span class="icon"></span>Your character is automatically saved as you play. The blue line on the right is your exp bar.</li>
+	                   <li><span class="icon"></span>برای حرکت کردن، برداشتن یا حمله، مقصد را انتخاب کرده، کلیک کنید. با شیفت به بازیکنان دیگر حمله کنید</li>
+	                   <li><span class="icon"></span>برای گپ زدن، انتر را بزنید.</li>
+	                   <li><span class="icon"></span>بازی به شکل خودکار ذخیره می شود، نوار آبی تجربه شما و نوار قرمز جان شماست.</li>
 	                </ul>
-	                    <p>- click anywhere to close -</p>
+	                    <p>- برای بستن، هر جایی کلیک کنید -</p>
 		        </article>
 		        <article id="achievements" class="page1 clickable">
 		            <div class="close"></div>
@@ -293,7 +293,7 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
     			        <div id="coinsparks"></div>
     			    </div>
     			    <div id="achievement-info">
-        			    <div class="title">New Achievement Unlocked!</div>
+        			    <div class="title">موفقیت جدید!</div>
         			    <div class="name"></div>
     			    </div>
     			</div>
@@ -311,7 +311,7 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
 					    </div>
 					</div>
                     <div id="playercount" class="clickable">
-                        <span class="count">0</span> <span>players</span>
+                        <span class="count">0</span> <span>بازیکنان</span>
                     </div>
                     <div id="barbuttons">
                         <div id="chatbutton" class="barbutton clickable"></div>
@@ -336,14 +336,14 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
 						<span>0</span> <span>players</span> in «&nbsp;<span id="guild-name"></span>&nbsp;»
 					</div>
                     <div id="world-population" class="">
-                        <span>0</span> <span>players</span> total
+                        <span>0</span> <span>players</span> در کل
                     </div>
                 </div>
 		    </div>
 		</div>
 		<footer>
 		    <div id="sharing" class="clickable">
-		      Share this on
+		      به اشتراک بگذارید
               <a href="http://twitter.com/share?url=http%3A%2F%2Fbrowserquest.mozilla.org&amp;text=Mozilla%27s%20BrowserQuest%3A%20HTML5%20massively%20multiplayer%20adventure%20game%20%23demo%20%23websockets&amp;related=glecollinet:Creators%20of%20BrowserQuest%2Cwhatthefranck" class="twitter"></a>
               <a href="http://www.facebook.com/share.php?u=http://browserquest.mozilla.org/" class="facebook"></a>
 		    </div>
