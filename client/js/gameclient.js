@@ -106,9 +106,9 @@ define(['player', 'entityfactory', 'lib/bison'], function(Player, EntityFactory,
 
                     if(self.disconnected_callback) {
                         if(self.isTimeout) {
-                            self.disconnected_callback("You have been disconnected for being inactive for too long");
+                            self.disconnected_callback("زمان زیادی مثل میخ ایستاده بودید، ارتباط را قطع کردیم.");
                         } else {
-                            self.disconnected_callback("The connection to BrowserQuest has been lost");
+                            self.disconnected_callback("ارتباط با سرور قطع شد.");
                         }
                     }
                 });

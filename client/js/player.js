@@ -1,6 +1,8 @@
 
 define(['character', 'exceptions'], function(Character, Exceptions) {
-
+    var persian_name = {
+        "weapon": "اسلحه"
+    };
     var Player = Character.extend({
         MAX_LEVEL: 10,
 
@@ -86,16 +88,16 @@ define(['character', 'exceptions'], function(Character, Exceptions) {
                 if(item.type === "armor") {
                     rank = Types.getArmorRank(item.kind);
                     currentRank = Types.getArmorRank(Types.getKindFromString(currentArmorName));
-                    msg = "You are wearing a better armor";
+                    msg = "در حال حاضر پوشش بهتری داری";
                 } else if(item.type === "weapon") {
                     rank = Types.getWeaponRank(item.kind);
                     currentRank = Types.getWeaponRank(Types.getKindFromString(this.weaponName));
-                    msg = "You are wielding a better weapon";
+                    msg = "در حال حاضر اسلحه بهتری داری";
                 }
 
                 if(rank && currentRank) {
                     if(rank === currentRank) {
-                        throw new Exceptions.LootException("You already have this "+item.type);
+                        throw new Exceptions.LootException("در حال حاضر همین " + (persian_name[item.type] || item.type) + " را داری " );
                     } else if(rank <= currentRank) {
                         throw new Exceptions.LootException(msg);
                     }

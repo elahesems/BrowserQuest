@@ -1,6 +1,11 @@
 
 define(['jquery', 'storage'], function($, Storage) {
-
+    var persian_name = {
+        "rat": "موش",
+        "priest": "محقق ارشد",
+        "guard": "نگهبان",
+        "weapon": "اسلحه"
+    };
     var App = Class.extend({
         init: function() {
             this.currentPage = 1;
@@ -310,8 +315,8 @@ define(['jquery', 'storage'], function($, Storage) {
                 var sprite = target.sprite,
                     x = ((sprite.animationData.idle_down.length-1)*sprite.width),
                     y = ((sprite.animationData.idle_down.row)*sprite.height);
-                $(el+' .name').text(name);
-
+                $(el+' .name').text(persian_name[name] || name);
+                
                 //Show how much Health creature has left. Currently does not work. The reason health doesn't currently go down has to do with the lines below down to initExpBar...
                 if(target.healthPoints){
                     $(el+" .health").css('width', Math.round(target.healthPoints/target.maxHp*100)+'%');

@@ -220,7 +220,7 @@ define(['jquery', 'app', 'entrypoint'], function($, App, EntryPoint) {
             });
 
             game.onDisconnect(function(message) {
-                $('#death').find('p').html(message+"<em>Please reload the page.</em>");
+                $('#death').find('p').html(message+"<em>لطفا صفحه را دوباره لود کنید</em>");
                 $('#respawn').hide();
             });
 

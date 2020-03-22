@@ -7,6 +7,9 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
          Warrior, GameClient, AudioManager, Updater, Transition, Pathfinder,
          Item, Mob, Npc, Player, Character, Chest, Mobs, Exceptions, config,
          Guild) {
+        var persian_name = {
+            "weapon": "اسلحه"
+        };
     var Game = Class.extend({
         init: function(app) {
             this.app = app;
@@ -188,26 +191,26 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
             this.achievements = {
                 A_TRUE_WARRIOR: {
                     id: 1,
-                    name: "A True Warrior",
-                    desc: "Find a new weapon"
+                    name: "مبارز",
+                    desc: "یک اسلحه پیدا کنید"
                 },
                 INTO_THE_WILD: {
                     id: 2,
-                    name: "Into the Wild",
-                    desc: "Venture outside the village"
+                    name: "شجاع",
+                    desc: "با احتیاط از منطقه امن خارج شوید"
                 },
                 ANGRY_RATS: {
                     id: 3,
-                    name: "Angry Rats",
-                    desc: "Kill 10 rats",
+                    name: "کشنده ویروس",
+                    desc: "ده ویروس بکشید",
                     isCompleted: function() {
                         return self.storage.getRatCount() >= 10;
                     }
                 },
                 SMALL_TALK: {
                     id: 4,
-                    name: "Small Talk",
-                    desc: "Talk to a non-player character"
+                    name: "دوست یاب",
+                    desc: "با یک نفر صحبت کنید"
                 },
                 FAT_LOOT: {
                     id: 5,
@@ -1466,7 +1469,7 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                     var expForLevelUp = Types.expForLevel[self.player.level] - Types.expForLevel[self.player.level-1];
                     var expPercentThisLevel = (100*expInThisLevel/expForLevelUp);
 
-                    self.showNotification( "Total xp: " + self.player.experience + ". " + expPercentThisLevel.toFixed(0) + "% of this level done." );
+                    self.showNotification( "تجربه فعلی: " + self.player.experience + " که می شود " + expPercentThisLevel.toFixed(0) + "٪ میزان لازم برای ارتقاء." );
 
                     var mobName = Types.getKindAsString(kind);
 

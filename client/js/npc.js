@@ -121,7 +121,7 @@ define(['character'], function(Character) {
         ],
 
         "priest": [
-            "Oh, hello, young man.",
+            "سلام جنگجوی سلامتی.",
             "Wisdom is everything, so I'll share a few guidelines with you.",
             "You are free to go wherever you like in this world",
             "but beware of the many foes that await you.",
