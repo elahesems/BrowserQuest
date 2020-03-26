@@ -849,7 +849,7 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                                             self.player.getGuild());
                     self.showNotification("Welcome to BrowserQuest!");
                 } else {
-                    self.showNotification("Welcome Back. You are level " + self.player.level + ".");
+                    self.showNotification("خوش برگشتی جنگجوی سطح " + self.player.level + " قهرمان.");
                     self.storage.setPlayerName(name);
                 }
 
@@ -1463,7 +1463,7 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                     self.player.experience = exp;
                     self.updateExpBar();
                     
-                    self.infoManager.addDamageInfo("+"+mobExp+" exp", self.player.x, self.player.y - 15, "exp", 3000);
+                    self.infoManager.addDamageInfo("+"+mobExp+" تجربه", self.player.x, self.player.y - 15, "exp", 3000);
 
                     var expInThisLevel = self.player.experience - Types.expForLevel[self.player.level-1];
                     var expForLevelUp = Types.expForLevel[self.player.level] - Types.expForLevel[self.player.level-1];

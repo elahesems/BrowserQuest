@@ -252,16 +252,16 @@ define(['jquery', 'app', 'entrypoint'], function($, App, EntryPoint) {
 
                 $("#instance-population").find("span").text(worldPlayers);
                 if(worldPlayers == 1) {
-                    setWorldPlayersString("player");
+                    setWorldPlayersString("بازیکن");
                 } else {
-                    setWorldPlayersString("players");
+                    setWorldPlayersString("بازیکن");
                 }
 
                 $("#world-population").find("span:nth-child(1)").text(totalPlayers);
                 if(totalPlayers == 1) {
-                    setTotalPlayersString("player");
+                    setTotalPlayersString("بازیکن");
                 } else {
-                    setTotalPlayersString("players");
+                    setTotalPlayersString("بازیکن");
                 }
             });
             					
@@ -273,9 +273,9 @@ define(['jquery', 'app', 'entrypoint'], function($, App, EntryPoint) {
                 $("#guild-population").find("span").text(guildPopulation);
 				$('#guild-name').text(guildName);
                 if(guildPopulation == 1) {
-                    setGuildPlayersString("player");
+                    setGuildPlayersString("بازیکن");
                 } else {
-                    setGuildPlayersString("players");
+                    setGuildPlayersString("بازیکن");
                 }
 			});
 
